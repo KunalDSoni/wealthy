@@ -1,0 +1,7 @@
+# Netlify — static export deploy
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
