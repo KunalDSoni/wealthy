@@ -113,5 +113,17 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-</body>
+<script id="phw-pricing-copy">(function(){
+function norm(s){return (s||"").replace(/[‘’]/g,"'").replace(/\s+/g," ").trim();}
+var M={"Do you like what you see?": "Ready to bring structure to your money?", "Let's work together to turn your dream project into reality.": "Let's build clarity in your financial journey.", "Let's work together.": "Let's build your wealth.", "Silver pack": "Starter", "Gold pack": "Wealth", "Platinum pack": "Family Office", "$90.00": "₹4,999", "$199.00": "₹14,999", "$899.00": "On request", "Per month": "one-time plan", "An affordable plan with essential features to get you started.": "A focused plan to get your finances structured and goals defined.", "A balanced plan offering advanced features at great value.": "Comprehensive, ongoing planning across all your major life goals.", "The ultimate plan with all premium features for power users.": "Full-service wealth management for families with complex needs.", "5 website": "Up to 3 goals planned", "10 website": "Up to 6 goals planned", "20 website": "Unlimited goals", "500 MB Storage": "Goal-based financial plan", "20 GB Storage": "Retirement & tax planning", "50 GB Storage": "Estate & succession guidance", "Unlimited Sub-Domain": "Annual portfolio review", "3 Custom Domain": "Quarterly check-ins", "10 Custom Domain": "Quarterly check-ins", "Unlimited Custom Domain": "Dedicated advisor", "Lifetime Free Support": "Ongoing support", "Get Silver Now": "Get Started", "Get Gold Now": "Choose Wealth", "Get Platinum Now": "Talk to Us"};var K={};for(var k in M){K[norm(k)]=M[k];}
+var done=new WeakSet();
+function run(){var els=document.querySelectorAll("p,a,h1,h2,h3,h4,h5,h6,li,span,div,strong,em,b");
+for(var i=0;i<els.length;i++){var el=els[i];if(done.has(el))continue;
+var t=norm(el.textContent);if(!t||K[t]===undefined)continue;
+var inner=el.getElementsByTagName("*"),skip=false;
+for(var j=0;j<inner.length;j++){if(K[norm(inner[j].textContent)]!==undefined){skip=true;break;}}
+if(skip)continue;el.textContent=K[t];done.add(el);}}
+run();document.addEventListener("DOMContentLoaded",run);window.addEventListener("load",run);
+var n=0,iv=setInterval(function(){run();if(++n>20)clearInterval(iv);},200);
+new MutationObserver(function(){run();}).observe(document.documentElement,{childList:true,subtree:true});})();</script></body>
 </html>
