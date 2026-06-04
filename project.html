@@ -114,5 +114,24 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-</body>
+<script id="phw-project-copy">(function(){
+function norm(s){return (s||"").replace(/[‘’]/g,"'").replace(/\s+/g," ").trim();}
+var M={"Creative Work with Real World Results": "Structured Wealth, Real World Results", "Explore our portfolio of projects that showcase our creativity, expertise, and passion for delivering impactful solutions.": "Explore how we bring structure to every part of your financial life \u2014 investing, protection, tax and long-term goals.", "Bold Typography in Packaging": "Wealth Creation", "Oribox \u2014 Professional Poster Design": "Wealth Protection", "Clarity \u2014 Task Management App UI": "Wealth Optimization", "Minimalist Packaging Concepts": "Wealth Structuring", "Gary Neville": "Goal-Based Investing", "Zenifer Lofez": "Long-Term Planning", "Packaging": "Wealth", "Concept": "Growth", "Poster": "Insurance", "Design": "Protection", "App": "Tax", "Interface": "Efficiency", "Minimalist": "Retirement", "Load More": "View All", "Do you like what you see?": "Ready to bring structure to your money?", "Let's work together to turn your dream project into reality.": "Let's build clarity, discipline and lasting wealth \u2014 together."};var K={};for(var k in M){K[norm(k)]=M[k];}
+var done=new WeakSet();
+function run(){
+ var els=document.querySelectorAll("p,a,h1,h2,h3,h4,h5,h6,li,span,div,strong,em,b");
+ for(var i=0;i<els.length;i++){var el=els[i];if(done.has(el))continue;
+  var t=norm(el.textContent);if(!t||K[t]===undefined)continue;
+  var inner=el.getElementsByTagName("*"),skip=false;
+  for(var j=0;j<inner.length;j++){if(K[norm(inner[j].textContent)]!==undefined){skip=true;break;}}
+  if(skip)continue;
+  el.textContent=K[t];done.add(el);
+ }
+}
+run();document.addEventListener("DOMContentLoaded",run);window.addEventListener("load",run);
+var n=0,iv=setInterval(function(){run();if(++n>20)clearInterval(iv);},200);
+var mo,raf=0;function sched(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;mo.disconnect();run();mo.observe(document.documentElement,{childList:true,subtree:true});});}
+mo=new MutationObserver(sched);mo.observe(document.documentElement,{childList:true,subtree:true});
+setTimeout(function(){mo.disconnect();if(raf){cancelAnimationFrame(raf);raf=0;}},8000);
+})();</script></body>
 </html>
