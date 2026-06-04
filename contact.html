@@ -113,5 +113,17 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-</body>
+<script id="phw-contact-copy">(function(){
+function norm(s){return (s||"").replace(/[‘’]/g,"'").replace(/\s+/g," ").trim();}
+var M={"The duration of a website project typically depends on its complexity. A basic website might take 2–4 weeks, while more advanced ones can take 2–3 months or more. Clear requirements and good communication help speed up the process.":"A financial plan typically takes 1–3 weeks once we understand your goals, income and commitments. Clear priorities and an open conversation help us move faster — and the plan keeps evolving with you over time.","Do you like what you see?": "Ready to bring structure to your money?", "Let's work together to turn your dream project into reality.": "Let's build clarity in your financial journey.", "Let's work together.": "Let's build your wealth.", "Let's talk and create something cool together.": "Let's bring structure to your financial future.", "How long does a website project usually take to complete?": "How long does it take to build a financial plan?", "How much does a website cost?": "How much does financial planning cost?", "We have a limited budget, will you still work with us?": "I'm just getting started — is it still worth it?", "Do you outsource any work?": "Is the advice unbiased and is my money safe?", "What services or solutions do you offer?": "What services do you actually offer?"};var K={};for(var k in M){K[norm(k)]=M[k];}
+var done=new WeakSet();
+function run(){var els=document.querySelectorAll("p,a,h1,h2,h3,h4,h5,h6,li,span,div,strong,em,b");
+for(var i=0;i<els.length;i++){var el=els[i];if(done.has(el))continue;
+var t=norm(el.textContent);if(!t||K[t]===undefined)continue;
+var inner=el.getElementsByTagName("*"),skip=false;
+for(var j=0;j<inner.length;j++){if(K[norm(inner[j].textContent)]!==undefined){skip=true;break;}}
+if(skip)continue;el.textContent=K[t];done.add(el);}}
+run();document.addEventListener("DOMContentLoaded",run);window.addEventListener("load",run);
+var n=0,iv=setInterval(function(){run();if(++n>20)clearInterval(iv);},200);
+new MutationObserver(function(){run();}).observe(document.documentElement,{childList:true,subtree:true});})();</script></body>
 </html>

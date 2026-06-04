@@ -114,5 +114,17 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-</body>
+<script id="phw-blog-copy">(function(){
+function norm(s){return (s||"").replace(/[‘’]/g,"'").replace(/\s+/g," ").trim();}
+var M={"Do you like what you see?": "Ready to bring structure to your money?", "Let's work together to turn your dream project into reality.": "Let's build clarity in your financial journey.", "Let's work together.": "Let's build your wealth.", "We're a group of passionate designers, developers, and strategists, together, we turn ideas into impactful digital experiences.": "Plain-English ideas on planning, investing and building long-term wealth with discipline.", "How digital agencies transform online presence": "How structure turns income into lasting wealth", "UX-Focused Design, SEO, Content Creation, and Data-Driven Marketing to Help Businesses.": "How a clear structure removes stress and quietly compounds wealth over time.", "The Impact of Digital Agencies on Brand Visibility": "Why goal-based investing beats chasing returns", "Discover how digital agencies help businesses stand out in crowded markets through branding.": "Why aligning money with goals outperforms reacting to market noise.", "How Creative Agencies Elevate Online Identity": "The quiet power of disciplined, long-term SIPs", "Find out how expert agencies turn low-visibility brands into digital brand.": "How small, consistent investments quietly build significant wealth.", "Why Businesses Rely on Digital Agencies for Growth": "Why most people fail at structure, not income", "Explore the reasons behind the growing dependence on digital agencies to drive traffic.": "The real reason wealth slips away — and how structure fixes it.", "The Role of Digital Experts in Shaping Modern Brands": "The role of discipline in building real wealth", "See how digital professionals influence everything from user experience to brand.": "Why steady habits beat clever timing in long-term investing.", "Transforming Online Presence: The Digital Agency Advantage": "Turning financial confusion into clarity", "Understand the unique strengths digital agencies bring to digital presence.": "A simple framework to bring order to your entire financial life."};var K={};for(var k in M){K[norm(k)]=M[k];}
+var done=new WeakSet();
+function run(){var els=document.querySelectorAll("p,a,h1,h2,h3,h4,h5,h6,li,span,div,strong,em,b");
+for(var i=0;i<els.length;i++){var el=els[i];if(done.has(el))continue;
+var t=norm(el.textContent);if(!t||K[t]===undefined)continue;
+var inner=el.getElementsByTagName("*"),skip=false;
+for(var j=0;j<inner.length;j++){if(K[norm(inner[j].textContent)]!==undefined){skip=true;break;}}
+if(skip)continue;el.textContent=K[t];done.add(el);}}
+run();document.addEventListener("DOMContentLoaded",run);window.addEventListener("load",run);
+var n=0,iv=setInterval(function(){run();if(++n>20)clearInterval(iv);},200);
+new MutationObserver(function(){run();}).observe(document.documentElement,{childList:true,subtree:true});})();</script></body>
 </html>
