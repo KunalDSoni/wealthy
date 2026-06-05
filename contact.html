@@ -120,8 +120,9 @@ var done=new WeakSet();
 var NAMES={about:"About",blog:"Blog",pricing:"Pricing",contact:"Contact",project:"Projects",team:"Our Team","privacy-policy":"Privacy Policy"};
 var BASE="Plan Happy Wealth — Financial Planning & Wealth Advisory";
 function fixTitle(){var seg=(location.pathname.replace(/\/+$/,"").split("/").pop()||"").replace(".html","").toLowerCase();var want=NAMES[seg]?NAMES[seg]+" | Plan Happy Wealth":BASE;if(document.title!==want)document.title=want;}
+function ensureContact(){var fs=document.querySelectorAll("form"),form=null;for(var i=0;i<fs.length;i++){if(/Send Message/.test(fs[i].textContent)){form=fs[i];break;}}if(!form)return;var ex=document.getElementById("phw-contact-details");if(ex&&ex.isConnected&&ex.previousElementSibling===form)return;if(ex&&ex.parentNode)ex.parentNode.removeChild(ex);var d=document.createElement("div");d.id="phw-contact-details";d.setAttribute("style","margin:30px auto 0;max-width:1150px;width:100%;padding-top:22px;border-top:1px solid rgba(0,0,0,0.08);text-align:center;font-family:inherit;color:#54595f;font-size:15px;line-height:1.7");d.innerHTML='<div style="font-weight:600;color:#0a0a0a">F 2708, Oberoi Splendor, JVLR, Mumbai 400060, India</div><div style="margin-top:4px"><a href="tel:+919930061909" style="color:inherit;text-decoration:none">+91 99300 61909</a> &nbsp;&middot;&nbsp; <a href="mailto:seemakakade@gmail.com" style="color:inherit;text-decoration:none">seemakakade@gmail.com</a></div>';form.insertAdjacentElement("afterend",d);}
 function run(){
- fixTitle();
+ fixTitle();ensureContact();
  var els=document.querySelectorAll("p,a,h1,h2,h3,h4,h5,h6,li,span,div,strong,em,b");
  for(var i=0;i<els.length;i++){var el=els[i];if(done.has(el))continue;
   var t=norm(el.textContent);if(!t||K[t]===undefined)continue;
